@@ -154,6 +154,7 @@ class CronSchedule
 
             switch ($hookType) {
                 case HookType::NEW_ORDER:
+                case HookType::CANCEL_ORDER:
                     $item = $this->orderFactory->create()->load($eventID);
                     break;
                 case HookType::NEW_ORDER_COMMENT:

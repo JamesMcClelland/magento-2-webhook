@@ -21,6 +21,9 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="order_cancel_after">
+        <observer name="mp_wh_order_cancel_after" instance="Mageplaza\Webhook\Observer\AfterCancel"/>
+    </event>
     <event name="sales_order_save_before">
         <observer name="mp_wh_save_order_before" instance="Mageplaza\Webhook\Observer\BeforeSave"/>
     </event>
